@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f5f1e8" />
+    <title>SmartStudy — Learn with a plan</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="page-glow page-glow-one"></div>
+    <div class="page-glow page-glow-two"></div>
+    <header class="site-header">
+      <a class="brand" href="/" aria-label="SmartStudy home">
+        <span class="brand-mark">✦</span>
+        <span>SmartStudy</span>
+      </a>
+      <div class="header-note"><span class="status-dot"></span> Your private study space</div>
+    </header>
+
+    <main class="app-shell">
+      <section class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">A calmer way to prepare</p>
+          <h1>Turn a big test into your next small win.</h1>
+          <p class="hero-text">Tell SmartStudy what you are learning. It will make a focused guide for your session, then help you practice and understand what you missed.</p>
+          <div class="difference-row" aria-label="What makes SmartStudy different">
+            <span>Built around your topic</span>
+            <span>Short, useful guides</span>
+            <span>Learn from missed answers</span>
+          </div>
+        </div>
+        <div class="hero-art" aria-hidden="true">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="art-card art-card-main"><span class="art-card-label">TODAY’S FOCUS</span><strong>Cells &amp; organelles</strong><span class="art-progress"><i></i></span><small>One idea at a time</small></div>
+          <div class="art-card art-card-small"><span>✦</span> Keep going</div>
+        </div>
+      </section>
+
+      <section class="panel form-panel" aria-labelledby="start-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">01 · Start with you</p>
+            <h2 id="start-heading">What are you studying?</h2>
+          </div>
+          <span class="step-pill">AI guide</span>
+        </div>
+        <form id="study-form" class="study-form">
+          <div class="form-row">
+            <label>
+              <span>Subject</span>
+              <select id="subject" name="subject" required>
+                <option value="">Pick one</option>
+                <option>Biology</option>
+                <option>Chemistry</option>
+                <option>Earth science</option>
+                <option>Physics</option>
+                <option>Math</option>
+                <option>Other</option>
+              </select>
+            </label>
+            <label>
+              <span>Test topic</span>
+              <input id="topic" name="topic" required placeholder="For example: photosynthesis" autocomplete="off" />
+            </label>
+          </div>
+          <label>
+            <span>What feels hardest right now? <em>Optional</em></span>
+            <textarea id="needs" name="needs" rows="3" placeholder="I mix up the steps… or I need the basics first…"></textarea>
+          </label>
+          <button class="primary-button" id="guide-button" type="submit"><span>Make my study guide</span><b>↗</b></button>
+        </form>
+        <div class="starter-block">
+          <span class="starter-label">Need an idea?</span>
+          <div id="starter-list" class="starter-list"></div>
+        </div>
+      </section>
+
+      <div id="notice" class="notice" role="status" aria-live="polite"></div>
+
+      <section id="guide-section" class="panel result-panel hidden" aria-labelledby="guide-heading">
+        <div class="section-heading result-heading">
+          <div>
+            <p class="eyebrow">02 · Your custom guide</p>
+            <h2 id="guide-heading">Ready when you are.</h2>
+          </div>
+          <span class="saved-badge">Saved here</span>
+        </div>
+        <div id="guide-content" class="guide-content"></div>
+        <div class="result-actions">
+          <button class="primary-button compact" id="quiz-button" type="button"><span>Make a practice quiz</span><b>→</b></button>
+        </div>
+      </section>
+
+      <section id="quiz-section" class="panel result-panel hidden" aria-labelledby="quiz-heading">
+        <div class="section-heading result-heading">
+          <div>
+            <p class="eyebrow">03 · Practice, then learn</p>
+            <h2 id="quiz-heading">Check what stuck.</h2>
+          </div>
+          <span class="step-pill">Practice quiz</span>
+        </div>
+        <div id="quiz-content" class="quiz-content"></div>
+      </section>
+
+      <section class="panel ask-panel" aria-labelledby="ask-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">04 · Ask a real question</p>
+            <h2 id="ask-heading">Stuck on one idea?</h2>
+          </div>
+          <span class="step-pill">Ask SmartStudy</span>
+        </div>
+        <form id="ask-form" class="ask-form">
+          <label>
+            <span>Your question</span>
+            <textarea id="question" name="question" rows="3" placeholder="Why do plants need light for photosynthesis?" required></textarea>
+          </label>
+          <div class="ask-footer">
+            <small>SmartStudy will keep the answer simple and safe.</small>
+            <button class="dark-button" id="ask-button" type="submit"><span>Ask</span><b>↗</b></button>
+          </div>
+        </form>
+        <div id="answer-content" class="answer-content hidden"></div>
+      </section>
+
+      <footer class="site-footer">
+        <span>Saves on this computer only for now.</span>
+        <span>SmartStudy · Version 1</span>
+      </footer>
+    </main>
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
