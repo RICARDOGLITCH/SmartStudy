@@ -3,133 +3,101 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f5f1e8" />
-    <title>SmartStudy — Learn with a plan</title>
+    <meta name="theme-color" content="#172136" />
+    <title>SmartStudy — a clearer way to prepare</title>
     <link rel="stylesheet" href="/styles.css" />
   </head>
   <body>
-    <div class="page-glow page-glow-one"></div>
-    <div class="page-glow page-glow-two"></div>
-    <header class="site-header">
-      <a class="brand" href="/" aria-label="SmartStudy home">
-        <span class="brand-mark">✦</span>
-        <span>SmartStudy</span>
-      </a>
-      <div class="header-note"><span class="status-dot"></span> Your private study space</div>
-    </header>
+    <div class="app-shell">
+      <aside class="sidebar">
+        <a class="brand" href="#top" aria-label="SmartStudy home">
+          <span class="brand-mark">✦</span>
+          <span>SmartStudy</span>
+        </a>
+        <p class="sidebar-kicker">YOUR STUDY SPACE</p>
+        <nav class="side-nav" aria-label="Main navigation">
+          <button class="nav-item active" data-view="home"><span class="nav-icon">⌂</span> Study space</button>
+          <button class="nav-item" data-view="guide" disabled><span class="nav-icon">✎</span> Current guide</button>
+          <button class="nav-item" data-view="quiz" disabled><span class="nav-icon">✓</span> Practice quiz</button>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="safety-mini"><span class="safety-dot"></span><div><strong>Kind by design</strong><small>Safe, calm, student-first</small></div></div>
+          <p class="local-note">Saves on this computer only for now.</p>
+        </div>
+      </aside>
 
-    <main class="app-shell">
-      <section class="hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow">A calmer way to prepare</p>
-          <h1>Turn a big test into your next small win.</h1>
-          <p class="hero-text">Tell SmartStudy what you are learning. It will make a focused guide for your session, then help you practice and understand what you missed.</p>
-          <div class="difference-row" aria-label="What makes SmartStudy different">
-            <span>Built around your topic</span>
-            <span>Short, useful guides</span>
-            <span>Learn from missed answers</span>
-          </div>
-        </div>
-        <div class="hero-art" aria-hidden="true">
-          <div class="orbit orbit-one"></div>
-          <div class="orbit orbit-two"></div>
-          <div class="art-card art-card-main"><span class="art-card-label">TODAY’S FOCUS</span><strong>Cells &amp; organelles</strong><span class="art-progress"><i></i></span><small>One idea at a time</small></div>
-          <div class="art-card art-card-small"><span>✦</span> Keep going</div>
-        </div>
-      </section>
+      <main class="main-content" id="top">
+        <header class="topbar">
+          <div class="breadcrumb"><span class="breadcrumb-dot"></span> Middle school study space</div>
+          <button class="avatar" type="button" aria-label="Student profile">S</button>
+        </header>
 
-      <section class="panel form-panel" aria-labelledby="start-heading">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">01 · Start with you</p>
-            <h2 id="start-heading">What are you studying?</h2>
-          </div>
-          <span class="step-pill">AI guide</span>
-        </div>
-        <form id="study-form" class="study-form">
-          <div class="form-row">
-            <label>
-              <span>Subject</span>
-              <select id="subject" name="subject" required>
-                <option value="">Pick one</option>
-                <option>Biology</option>
-                <option>Chemistry</option>
-                <option>Earth science</option>
-                <option>Physics</option>
-                <option>Math</option>
-                <option>Other</option>
-              </select>
-            </label>
-            <label>
-              <span>Test topic</span>
-              <input id="topic" name="topic" required placeholder="For example: photosynthesis" autocomplete="off" />
-            </label>
-          </div>
-          <label>
-            <span>What feels hardest right now? <em>Optional</em></span>
-            <textarea id="needs" name="needs" rows="3" placeholder="I mix up the steps… or I need the basics first…"></textarea>
-          </label>
-          <button class="primary-button" id="guide-button" type="submit"><span>Make my study guide</span><b>↗</b></button>
-        </form>
-        <div class="starter-block">
-          <span class="starter-label">Need an idea?</span>
-          <div id="starter-list" class="starter-list"></div>
-        </div>
-      </section>
+        <div id="toast" class="toast" role="status" aria-live="polite"></div>
 
-      <div id="notice" class="notice" role="status" aria-live="polite"></div>
-
-      <section id="guide-section" class="panel result-panel hidden" aria-labelledby="guide-heading">
-        <div class="section-heading result-heading">
-          <div>
-            <p class="eyebrow">02 · Your custom guide</p>
-            <h2 id="guide-heading">Ready when you are.</h2>
+        <section id="home-view" class="view active-view">
+          <div class="welcome-row">
+            <div>
+              <p class="eyebrow">MAKE ONE TOPIC FEEL LIGHTER</p>
+              <h1>Study smarter,<br /><em>one win at a time.</em></h1>
+              <p class="lede">Tell SmartStudy what you’re preparing for. It will turn the big topic into a focused guide you can actually use.</p>
+            </div>
+            <div class="spark-card" aria-hidden="true">
+              <div class="spark-orbit orbit-one"></div><div class="spark-orbit orbit-two"></div><span class="spark">✦</span>
+              <span class="spark-label">A clearer<br />next step</span>
+            </div>
           </div>
-          <span class="saved-badge">Saved here</span>
-        </div>
-        <div id="guide-content" class="guide-content"></div>
-        <div class="result-actions">
-          <button class="primary-button compact" id="quiz-button" type="button"><span>Make a practice quiz</span><b>→</b></button>
-        </div>
-      </section>
 
-      <section id="quiz-section" class="panel result-panel hidden" aria-labelledby="quiz-heading">
-        <div class="section-heading result-heading">
-          <div>
-            <p class="eyebrow">03 · Practice, then learn</p>
-            <h2 id="quiz-heading">Check what stuck.</h2>
+          <div class="feature-strip">
+            <div><span class="feature-icon lavender">✧</span><div><strong>Made for you</strong><small>Focus on what matters most</small></div></div>
+            <div><span class="feature-icon mint">↗</span><div><strong>Practice as you go</strong><small>Learn from every answer</small></div></div>
+            <div><span class="feature-icon peach">♡</span><div><strong>Kind by design</strong><small>No judgment, just progress</small></div></div>
           </div>
-          <span class="step-pill">Practice quiz</span>
-        </div>
-        <div id="quiz-content" class="quiz-content"></div>
-      </section>
 
-      <section class="panel ask-panel" aria-labelledby="ask-heading">
-        <div class="section-heading">
-          <div>
-            <p class="eyebrow">04 · Ask a real question</p>
-            <h2 id="ask-heading">Stuck on one idea?</h2>
-          </div>
-          <span class="step-pill">Ask SmartStudy</span>
-        </div>
-        <form id="ask-form" class="ask-form">
-          <label>
-            <span>Your question</span>
-            <textarea id="question" name="question" rows="3" placeholder="Why do plants need light for photosynthesis?" required></textarea>
-          </label>
-          <div class="ask-footer">
-            <small>SmartStudy will keep the answer simple and safe.</small>
-            <button class="dark-button" id="ask-button" type="submit"><span>Ask</span><b>↗</b></button>
-          </div>
-        </form>
-        <div id="answer-content" class="answer-content hidden"></div>
-      </section>
+          <div class="workspace-grid">
+            <section class="panel form-panel">
+              <div class="panel-heading">
+                <div><p class="eyebrow">START HERE</p><h2>Build your study guide</h2></div>
+                <span class="step-pill">1 of 2</span>
+              </div>
+              <p class="panel-intro">A few quick details help SmartStudy choose the right amount of detail for you.</p>
+              <form id="guide-form">
+                <div class="field-row">
+                  <label class="field"><span>Subject</span><select name="subject"><option>Biology</option><option>Chemistry</option><option>Earth science</option><option>Physics</option><option>Other science</option></select></label>
+                  <label class="field"><span>Grade</span><select name="grade"><option>6th grade</option><option>7th grade</option><option>8th grade</option></select></label>
+                </div>
+                <label class="field"><span>What are you studying?</span><input name="topic" required placeholder="e.g. Cell structure and function" /></label>
+                <div class="field-row">
+                  <label class="field"><span>Time today</span><select name="minutes"><option value="15">15 minutes</option><option value="25" selected>25 minutes</option><option value="40">40 minutes</option><option value="60">60 minutes</option></select></label>
+                  <label class="field"><span>My goal is to…</span><select name="goal"><option>Understand the most important ideas</option><option>Remember key vocabulary</option><option>Prepare for a test</option><option>Practice what I already know</option></select></label>
+                </div>
+                <div class="form-actions"><span class="form-hint">Your guide will be short, focused, and yours.</span><button class="primary-button" id="guide-submit" type="submit"><span class="button-label">Create my guide</span><span class="button-arrow">→</span></button></div>
+                <div id="guide-error" class="inline-error" role="alert"></div>
+              </form>
+            </section>
 
-      <footer class="site-footer">
-        <span>Saves on this computer only for now.</span>
-        <span>SmartStudy · Version 1</span>
-      </footer>
-    </main>
-    <script type="module" src="/app.js"></script>
+            <aside class="panel difference-panel">
+              <div class="difference-top"><span class="difference-icon">✦</span><div><p class="eyebrow">WHY SMARTSTUDY?</p><h2>Less textbook.<br /><em>More “I get it.”</em></h2></div></div>
+              <p>Unlike a fixed set of flashcards, SmartStudy shapes the session around your topic, time, and goal — then lets you practice right away.</p>
+              <div class="difference-line"><span>01</span><strong>Focus</strong><small>Only the ideas you need first.</small></div>
+              <div class="difference-line"><span>02</span><strong>Try</strong><small>Practice with a quiz from your guide.</small></div>
+              <div class="difference-line"><span>03</span><strong>Learn</strong><small>See why an answer works.</small></div>
+            </aside>
+          </div>
+
+          <section class="ask-panel panel">
+            <div class="ask-copy"><span class="ask-bubble">?</span><div><p class="eyebrow">STUCK ON A QUESTION?</p><h2>Ask SmartStudy</h2><p>Get a simple answer, an example, and one tiny check to try.</p></div></div>
+            <form id="ask-form" class="ask-form"><label class="sr-only" for="question-input">Ask a study question</label><input id="question-input" name="question" placeholder="e.g. Why do cells need mitochondria?" required /><button id="ask-submit" class="icon-button" type="submit" aria-label="Ask SmartStudy">→</button></form>
+            <div id="answer-area" class="answer-area" aria-live="polite"></div>
+          </section>
+
+          <section id="recent-panel" class="recent-panel" hidden></section>
+        </section>
+
+        <section id="guide-view" class="view" hidden></section>
+        <section id="quiz-view" class="view" hidden></section>
+      </main>
+    </div>
+    <script src="/storage.js"></script>
+    <script src="/app.js"></script>
   </body>
 </html>
