@@ -10,7 +10,7 @@
 - Impact area: School and learning
 - Why it matters (impact): It can make people get better grades, study better, and develop good studying habits. Overall students need better ways to study, remember information, and prepare for tests because traditional studying methods aren't always effective
 - Evidence it’s real: "The students mostly used expansive strategies, however, due to some problems (e.g., low prior knowledge, misunderstanding, or inattentive reading), they used limiting strategies (e.g., deducing from the task structure or guessing answers), and failed the tasks. These results offer a solid foundation for subsequent steps toward improving classroom practice, which stresses the need to focus on problem-solving and strategy development more during (chemistry) lessons." - ACS Publications,(https://pubs.acs.org/jceda8/article-abstract/98/6/1831/389604/Students-Procedure-When-Solving-Problem-Tasks?redirectedFrom=fulltext)
-- What people told me: Person said " I don't really like using new strategies to study. I mostly use flashcards; it also stresses me out more that I have an entire TEXTBOOK to study in 1 week."
+- What people told me: Person said " I don't really like using new strategies to study. I mostly use flashcards; it also stresses me out more that we have an entire TEXTBOOK to study in 1 week."
 
 ## My solution
 - My AI’s job: My AI helps by making a customized study guide, which works better than working with a fixed study guide because people might think it doesn't really work for them or in their way, also it can help by putting useful infortmaition instead of all of it at once, using only the important ones.
@@ -46,8 +46,8 @@ The AI responds kindly, breaks the topic into smaller pieces, and encourages the
 ## My AI’s instructions
 - When it answers: For smart study, its like a form for their study needs, then click submit(or arrow. may be subject to change)
 - Its job: to make their studing session as productive and helpful as possible
-- Who it talks to and how to sound: The ai is is talking to a student or someone how needs help stuyding, it should sound friendly and simple/ concise.
-- Facts it must use: Brittanica, https://arc.duke.edu/study-strategies-that-work/, and things like quizlet to make the set Cornell Learning Strategies Center — guides on note-taking, reading, exam preparation, schedules, and study groups.
+- Who it talks to and how to sound: the AI is talking to a student or someone who needs help studying, it should sound friendly and simple / concise.
+- Facts it must use: Britannica, https://arc.duke.edu/study-strategies-that-work/, and things like Quizlet to make the set. Cornell Learning Strategies Center — guides on note-taking, reading, exam preparation, schedules, and study groups.
 Cornell’s Effective Study Strategies
 - Rules it must follow: Discourage the user, make non productive work
-- How to answer: THey should say like "Done, heres your study guide"(insert study guide) they should also account what subject their doing, and answer any questions like "Okay! so lets work it togehter, and its like interactive and stuff
+- How to answer: They should say like "Done, here's your study guide" (insert study guide). They should also account for what subject they're doing, and answer questions like "Okay! so let's work it together," and make it interactive.
